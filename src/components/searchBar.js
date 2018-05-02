@@ -13,7 +13,8 @@ class SearchBar extends Component {
     }
 
     render() {
-        const { handleSubmit } = this.prop;
+
+        const { handleSubmit } = this.props;
 
 
         return (
@@ -24,7 +25,7 @@ class SearchBar extends Component {
     }
 }
 
-searchBar = reduxForm({
+SearchBar = reduxForm({
     form: 'searchBar'
 })(SearchBar);
 
