@@ -1,6 +1,9 @@
-export function fetchRecentPosts() {
-  return function(dispatch) {
+import { combineReducers } from 'redux';
 
-    console.log('hello');
-  }
-}
+import { reducer as form } from 'redux-form';
+
+const rootReducer = combineReducers({
+  form
+});
+
+export default rootReducer;
