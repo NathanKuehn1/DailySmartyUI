@@ -9,9 +9,9 @@ const Logo = (props) => {
         
         return (
             <div className='logo-main'>
-                <Link to='/'>
-                     <img style={size} src ="/assets/ds_circle_logo.png" alt='daily smarty image ui image logo big'/>
-                </Link>
+               <Link to='/'>
+                   <img style={size} src ="/assets/ds_circle_logo.png" alt='daily smarty image ui image logo big'/>
+               </Link>
             </div>
         )
     }
