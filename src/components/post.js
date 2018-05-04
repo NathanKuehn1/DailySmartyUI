@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import AnimatedHeight from 'react-animate-height';
 
 class Post extends Component {
+
+    constructor
 
     renderTopics() {
         let topics = this.props.associated_topics.map((topic, index) => {
@@ -45,13 +48,21 @@ class Post extends Component {
                         {this.renderTopics()}
     
                         </div>
-                        <div className="recent-post__title">
-                            {this.props.title}    
-
+                        <div className="recent-post__title">  
+                            <a href={this.props.url_for_post}
+                                onMouseEnter={() => this.setState({ height: 70 })}
+                                onMouseEnter={() => this.setState({ height: 0 })}
+                            >
+                            {this.props.title}</a>
                         </div>
-                        <div className="recent-post__links">
-                            {this.renderTopics()}
-                    </div>
+                        <AnimateHeight
+                            duration={500}
+                            height={this.state.height}
+                        >
+                            <div className="recent-post__links">
+                                {this.renderLinks()}
+                        </div>
+                    </AnimateHeight>
                 </li>
             )
         }
