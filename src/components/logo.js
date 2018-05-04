@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 const Logo = (props) => {
         const size = {
             height: props.size ? props.size : 105
@@ -7,7 +9,9 @@ const Logo = (props) => {
         
         return (
             <div className='logo-main'>
-                <img style={size} src ="/assets/ds_circle_logo.png" alt='daily smarty image ui image logo big'/>
+                <Link to='/'>
+                     <img style={size} src ="/assets/ds_circle_logo.png" alt='daily smarty image ui image logo big'/>
+                </Link>
             </div>
         )
     }
