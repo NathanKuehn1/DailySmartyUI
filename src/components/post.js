@@ -32,12 +32,10 @@ class Post extends Component {
             return (
                 <li className="recent-post">
                     <div className="recent-post__title">
-                    {this.props.title}
-    
-                </div>
-                <div className="recent-post__topics">
-                    {this.renderTopics()}
-    
+                        <a href={this.props.url_for_post}>{this.props.title}</a>
+                    </div>
+                    <div className="recent-post__topics">
+                        {this.renderTopics()}
                     </div>
                 </li>
             )
@@ -46,13 +44,12 @@ class Post extends Component {
                 <li className="result-post">
                     <div className="result-post__topics">
                         {this.renderTopics()}
-    
-                        </div>
-                        <div className="recent-post__title">  
-                            <a href={this.props.url_for_post}
-                                onMouseEnter={() => this.setState({ height: 70 })}
-                                onMouseEnter={() => this.setState({ height: 0 })}
-                            >
+                    </div>
+                    <div className="recent-post__title">  
+                        <a href={this.props.url_for_post}
+                            onMouseEnter={() => this.setState({ height: 70 })}
+                            onMouseEnter={() => this.setState({ height: 0 })}
+                        >
                             {this.props.title}</a>
                         </div>
                         <AnimateHeight
