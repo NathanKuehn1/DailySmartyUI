@@ -14,7 +14,6 @@ const createStoreWithMiddleware = applyMiddleware(thunk)(compose((window.devTool
 import 'bootstrap/dist/css/bootstrap.css';
 import './style/main.scss';
 
-
 function main() {
   ReactDOM.render(
     <Provider store={createStoreWithMiddleware(reducers)}>

@@ -24,8 +24,20 @@ body {
     justify-content: center;
 }
 
+@mixin default-page-layout {
+    height: 120vh;
+    width: 66vw;
+    display: grid;
+    align-content: space-around;
+
+}
+
 .home {
     @include default-page-layout();
+}
+
+.results {
+   @include default-page-layout();
 }
 
 .logo-main,
