@@ -6,7 +6,7 @@
 
         display: grid;
         grid-row-gap: 23px;
-        width: 100%;
+        width: 105%;
 
         input {
             padding-left: 35px;
@@ -15,8 +15,7 @@
             border: none;
             border-radius: 5px;
 
-            height: 118px;
-            font-size: 48px;
+
 
           
 
@@ -45,18 +44,26 @@
 }
 
 .search-bar__home {
- 
+    align-content: center;
+    justify-items: center;
+
     input {
         height: 118px;
         font-size: 40px;
+        @media screen and (max-width: 600px) {
+            font-size: 23px;
+            height: 59px;
+        }
     }
 }
 
 .search-bar__results {
+    align-content: start;
+    justify-items: center;
     
     input {
         font-size: 22px;
-        justify-items: center;
+       
         height: 36px;
     }
 }

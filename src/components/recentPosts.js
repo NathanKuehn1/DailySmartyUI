@@ -9,7 +9,7 @@ import Post from './post';
 class RecentPosts extends Component {
 
     componentDidMount() {
-        this.props.fetchRecentPosts()
+        this.props.fetchRecentPosts();
     }
 
     renderPosts = function() {
